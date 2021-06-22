@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-// Image returns a thumbnail-size version of src.
+// Image returns a thumbnail-size version of client.
 func Image(src image.Image) image.Image {
 	// Compute thumbnail size, preserving aspect ratio.
 	xs := src.Bounds().Size().X

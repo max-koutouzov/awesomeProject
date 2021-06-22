@@ -41,7 +41,7 @@ func inner() {
 	for i := 0; i < 5; i++ {
 		func(j int) {
 			fmt.Println("printing", j, "inside from anonymous function")
-		} (i)
+		}(i)
 	}
 }
 
@@ -49,10 +49,10 @@ func peopleSlice() {
 	type Person struct {
 		FirstName string
 		LastName  string
-		Age 	  int
+		Age       int
 	}
 
-	people := []Person {
+	people := []Person{
 		{"Pat", "Patterson", 37},
 		{"Tracy", "Bobbert", 23},
 		{"Fred", "Fredson", 18},
@@ -84,7 +84,7 @@ func main() {
 	}
 	uniqueNames := map[string]bool{"Fred": true, "Raul": true, "Wilma": true}
 
-	mapster := map[string]int {
+	mapster := map[string]int{
 		"a": 1,
 		"b": 2,
 		"c": 3,
@@ -116,5 +116,3 @@ func main() {
 		fmt.Println(twoBase(i), threeBase(i))
 	}
 }
-
-

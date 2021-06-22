@@ -6,7 +6,7 @@ import (
 )
 
 type Counter struct {
-	total 		int
+	total       int
 	lastUpdated time.Time
 }
 

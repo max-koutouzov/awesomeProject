@@ -47,5 +47,8 @@ func main() {
 			w.Write([]byte("Too many requests"))
 		}
 	})
-	http.ListenAndServe("0.0.0.0:5000", nil)
+	err := http.ListenAndServe("0.0.0.0:80", nil)
+	if err != nil {
+		return
+	}
 }

@@ -17,11 +17,11 @@ type thirdPerson struct {
 
 type fourthPerson struct {
 	firstName string
-	age 	  int
+	age       int
 }
 
 type fifthPerson struct {
-	name 		  string
-	age 		  int
+	name          string
+	age           int
 	favoriteColor string
 }

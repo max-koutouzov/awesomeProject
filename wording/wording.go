@@ -15,7 +15,7 @@ func slicing(inputs []int) []int {
 func wordConcat(start string, finish string) (string, int) {
 
 	starting, err := ioutil.ReadFile("../index.html")
-	if err != nil{
+	if err != nil {
 		fmt.Printf("Error opening and concatenating words %s\n", err)
 	}
 	printIt, _ := fmt.Printf("Here you go: %s \n\n", starting)
@@ -24,7 +24,7 @@ func wordConcat(start string, finish string) (string, int) {
 	return string(rune(printIt)), printMessage
 }
 
-func capacityChecking()  {
+func capacityChecking() {
 	fmt.Print("\n\nSlice\tLength\tCapacity\n")
 	var x []int
 	fmt.Println(x, len(x), cap(x))
@@ -51,7 +51,6 @@ func shareMemory() {
 	fmt.Println("y:", y)
 	fmt.Println("z:", z)
 }
-
 
 func makingThngs() []int {
 	x := make([]int, 0, 10)
@@ -91,7 +90,6 @@ func confusingSlices() {
 	fmt.Println("z:", z)
 }
 
-
 func stringy(input string) (string, string, string) {
 	var s2 = input[4:7]
 	var s3 = input[:5]
@@ -112,17 +110,15 @@ func mappy() map[string]int {
 }
 
 func mappyTeams() (map[string][]string, map[int][]string) {
-	teams := map[string][]string {
-		"Orcas": []string{"Fred", "Ralph", "Bijou"},
-		"Lions": []string{"Sarah", "Peter", "Billie"},
+	teams := map[string][]string{
+		"Orcas":   []string{"Fred", "Ralph", "Bijou"},
+		"Lions":   []string{"Sarah", "Peter", "Billie"},
 		"Kittens": []string{"Waldo", "Raul", "Ze"},
 	}
-	ages := make(map[int][]string,10)
-
+	ages := make(map[int][]string, 10)
 
 	return teams, ages
 }
-
 
 func results() {
 	totalWins := mappy()
@@ -132,15 +128,14 @@ func results() {
 	fmt.Printf("Orcas won: %v\n", totalWins["Orcas"])
 	fmt.Printf("Kittens won: %v\n", totalWins["Kittens"])
 	totalWins["Kittens"]++
-	fmt.Printf("New Kittens score: %v\n",totalWins["Kittens"])
+	fmt.Printf("New Kittens score: %v\n", totalWins["Kittens"])
 	totalWins["Lions"] = 3
 	fmt.Printf("Lions win: %v\n", totalWins["Lions"])
 }
 
-
 func inSetting() (map[int]bool, []int) {
 	inSet := map[int]bool{}
-	vals := []int{5, 7, 3, 4,6, 10, 11, 5, 4, 17, 18}
+	vals := []int{5, 7, 3, 4, 6, 10, 11, 5, 4, 17, 18}
 	for _, v := range vals {
 		inSet[v] = true
 	}
@@ -154,17 +149,17 @@ func inSetting() (map[int]bool, []int) {
 }
 
 func structing() {
-	var person struct{
+	var person struct {
 		name string
-		age int
-		pet string
+		age  int
+		pet  string
 	}
 
 	person.name = "Bob"
 	person.age = 50
 	person.pet = "Dog"
 
-	pet := struct{
+	pet := struct {
 		name string
 		kind string
 	}{
@@ -174,8 +169,6 @@ func structing() {
 	fmt.Println(json.Marshal(person))
 	fmt.Println(json.Marshal(pet))
 }
-
-
 
 func main() {
 	wordConcat("Printed", "Output")

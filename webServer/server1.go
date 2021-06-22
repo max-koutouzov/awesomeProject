@@ -1,4 +1,4 @@
-// Server1 is a minimal echo server
+// Server1 is a minimal echo client
 
 package main
 

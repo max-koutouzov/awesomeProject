@@ -9,8 +9,8 @@ type Adder struct {
 }
 
 type Employee struct {
-	Name 		string
-	ID 			string
+	Name string
+	ID   string
 }
 
 func (e Employee) Description() string {
@@ -27,13 +27,9 @@ func (m Manager) FindNewEmployees() []Employee {
 	return m.Reports
 }
 
-
 func (a Adder) AddTo(val int) int {
 	return a.start + val
 }
-
-
-
 
 func main() {
 	myAddr := Adder{start: 10}
